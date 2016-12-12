@@ -1,0 +1,28 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [ "import", "react" ],
+  "extends": [ "eslint:recommended", "plugin:react/recommended", "plugin:import/recommended" ],
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
+  "rules": {
+    "no-undef": 2,
+    "no-unused-vars": 2,
+    "no-console": 0
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2015,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true,
+      "forOf": true
+    }
+  }
+}
