@@ -16,6 +16,7 @@
     "react-dom": "^15.0.0",
     "react-leaflet": "^1.0.1"
   },
+  "repository": "https://github.com/masotime/react-mapbox-universal",
   "devDependencies": {
     "babel-cli": "^6",
     "babel-eslint": "^7",
