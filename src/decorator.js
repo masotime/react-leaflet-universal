@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-const { node } = PropTypes;
+const { node, func } = PropTypes;
 
 export default function decorate(componentName) {
 	class Decorated extends Component {
@@ -19,13 +19,15 @@ export default function decorate(componentName) {
 			if (!this.state.loaded) return null;
 
 			const { ClientComponent } = this;
-			const { children, ...rest } = this.props;
-			return <ClientComponent {...rest}>{children}</ClientComponent>;
+			const { children, leafletRef, ...rest } = this.props;
+
+			return <ClientComponent {...rest} ref={leafletRef}>{children}</ClientComponent>;
 		}
 	}
 
 	Decorated.propTypes = {
-		children: node
+		children: node,
+		leafletRef: func
 	};
 
 	return Decorated;
