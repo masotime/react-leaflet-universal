@@ -1,6 +1,5 @@
-import React, { Component, PropTypes } from 'react';
-
-const { node, func } = PropTypes;
+import React, { Component } from 'react';
+import { node, func } from 'prop-types';
 
 export default function decorate(componentName) {
 	class Decorated extends Component {
