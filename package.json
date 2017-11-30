@@ -1,6 +1,6 @@
 {
   "name": "react-leaflet-universal",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Simple wrapper around react-leaflet for painless universal integration",
   "main": "dist/index.js",
   "scripts": {
@@ -34,7 +34,7 @@
     "eslint-plugin-react": "^6.8.0",
     "leaflet": "^1.0.2",
     "react": "^15.x || ^16.x",
-		"react-dom": "^15.x || ^16.x",
+    "react-dom": "^15.x || ^16.x",
     "react-leaflet": "^1.0.1"
   }
 }
