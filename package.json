@@ -13,8 +13,8 @@
   "license": "ISC",
   "peerDependencies": {
     "prop-types": "^15.5.7",
-    "react": "^15.0.0",
-    "react-dom": "^15.0.0",
+    "react": "^15.x || ^16.x",
+    "react-dom": "^15.x || ^16.x",
     "react-leaflet": "^1.0.1"
   },
   "repository": "https://github.com/masotime/react-mapbox-universal",
@@ -33,8 +33,8 @@
     "eslint-plugin-import": "^2",
     "eslint-plugin-react": "^6.8.0",
     "leaflet": "^1.0.2",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1",
+    "react": "^15.x || ^16.x",
+		"react-dom": "^15.x || ^16.x",
     "react-leaflet": "^1.0.1"
   }
 }
