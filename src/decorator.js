@@ -9,12 +9,12 @@ export default function decorate(componentName) {
 	class Decorated extends Component {
 		constructor(props) {
 			super(props);
-			this.state = { loaded : false };
+			this.state = { loaded: false };
 			this.constructor.displayName = displayName;
 		}
 
 		componentDidMount() {
-			this.setState({ loaded: true });
+			this.setState(() => ({ loaded: true }));
 			this.ClientComponent = require('react-leaflet')[componentName];
 		}
 
