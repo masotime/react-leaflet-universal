@@ -25,7 +25,7 @@ To mitigate this, you can now use a function [render prop][render-prop-url] inst
 
 ```
 <Map>
-	<TileLayer ... />
+  <TileLayer ... />
 </Map>
 ```
 
@@ -33,33 +33,35 @@ this will also work
 
 ```
 <Map>
-	() => {
-		return <TileLayer ... />
-	}
+  () => {
+    return <TileLayer ... />
+  }
 </Map>
 ```
 
 So in the case of `react-leaflet-markercluster`, you can write something similar to:
 
 ```
-	<Map>
-		() => {
-			return (
-				<div>
-					<TileLayer
-						url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-						attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-					/>
-					<MarkerClusterGroup
-						markers={[
-							{ position: [49.8397, 24.0297] },
-							{ position: [52.2297, 21.0122] },
-							{ position: [51.5074, -0.0901] },
-						]}
-					/>
-				</div>
-			);
-		}
+<Map>
+  () => {
+    const MarkerClusterGroup = require('react-leaflet-markercluster').default;
+    return (
+      <div>
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        />
+        <MarkerClusterGroup
+          markers={[
+            { position: [49.8397, 24.0297] },
+            { position: [52.2297, 21.0122] },
+            { position: [51.5074, -0.0901] },
+          ]}
+        />
+      </div>
+    );
+  }
+ </Map>
 ```
 
 (contrast with the [example on the react-leaflet-markercluster website][markercluster-example-url])
