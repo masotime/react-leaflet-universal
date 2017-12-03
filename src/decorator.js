@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import { node, func } from 'prop-types';
+import { PropTypes } from 'prop-types';
+
+const { node, oneOfType, func } = PropTypes;
 
 export default function decorate(componentName) {
+	const displayName = `LeafletUniv${componentName}`;
+
 	class Decorated extends Component {
 		constructor(props) {
 			super(props);
 			this.state = { loaded : false };
-			this.constructor.displayName = `Wrapped${componentName}`;
+			this.constructor.displayName = displayName;
 		}
 
 		componentDidMount() {
@@ -19,13 +23,19 @@ export default function decorate(componentName) {
 
 			const { ClientComponent } = this;
 			const { children, leafletRef, ...rest } = this.props;
+			const childComponents = typeof children === 'function' ? children() : children;
 
-			return <ClientComponent {...rest} ref={leafletRef}>{children}</ClientComponent>;
+			return (
+				<ClientComponent {...rest} ref={leafletRef}>
+					{ childComponents }
+				</ClientComponent>
+			);
 		}
 	}
 
+	Decorated.displayName = displayName;
 	Decorated.propTypes = {
-		children: node,
+		children: oneOfType([node, func]),
 		leafletRef: func
 	};
 
