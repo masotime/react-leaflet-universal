@@ -4,6 +4,8 @@ const COMPONENTS = [
 	'AttributionControl',
 	'Circle',
 	'CircleMarker',
+	'ControlledLayer',
+	'DivOverlay',
 	'FeatureGroup',
 	'GeoJSON',
 	'GridLayer',
@@ -13,6 +15,7 @@ const COMPONENTS = [
 	'Map',
 	'MapComponent',
 	'MapControl',
+	'MapEvented',
 	'MapLayer',
 	'Marker',
 	'Pane',
@@ -24,6 +27,7 @@ const COMPONENTS = [
 	'ScaleControl',
 	'TileLayer',
 	'Tooltip',
+	'VideoOverlay',
 	'WMSTileLayer',
 	'ZoomControl'
 ];
