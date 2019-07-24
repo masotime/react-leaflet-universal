@@ -17,6 +17,14 @@ write
 import { Map } from 'react-leaflet-universal';
 ```
 
+To forward reference, pass to `leafletRef`:
+
+```
+<Map leafletRef={ref}>
+  <TileLayer ... />
+</Map>
+```
+
 ## Troubleshooting custom `react-leaflet` components / render prop support
 
 Some components, such as [react-leaflet-markercluster][markercluster-url], make use of `componentWillMount` and so cannot be used directly.
