@@ -1,6 +1,6 @@
 {
   "name": "react-leaflet-universal",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Simple wrapper around react-leaflet for painless universal integration",
   "main": "dist/index.js",
   "module": "src/index.js",
