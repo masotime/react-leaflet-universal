@@ -3,6 +3,7 @@
   "version": "2.1.1",
   "description": "Simple wrapper around react-leaflet for painless universal integration",
   "main": "dist/index.js",
+  "module": "src/index.js",
   "scripts": {
     "lint": "eslint src/*",
     "compile": "rm -rf dist/; babel --plugins @babel/transform-runtime,add-module-exports -d dist/ src/",
