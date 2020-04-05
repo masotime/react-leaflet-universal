@@ -22,7 +22,7 @@ export default function decorate(componentName) {
 
 		componentDidUpdate() {
 			const ref = this._getRef();
-			if (ref && ref.current) {
+			if (ref && ref.current && this.leafletElement !== ref.current.leafletElement) {
 				this.leafletElement = ref.current.leafletElement;
 			}
 		}

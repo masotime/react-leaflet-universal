@@ -25,6 +25,8 @@ To forward reference, pass to `leafletRef`:
 </Map>
 ```
 
+If you do not provide `leafletRef`, wrappers will instead create their own ref and set the property `leafletElement` on the instance when it becomes available, so setting a `ref` prop will still work, however note that since this only occurs late in the render cycle, `leafletElement` may still be undefined when attempting to access it from the `ref`, so it is recommended to check that `ref.leafletElement` exists before attempting to invoke properties or methods on it.
+
 ## Troubleshooting custom `react-leaflet` components / render prop support
 
 Some components, such as [react-leaflet-markercluster][markercluster-url], make use of `componentWillMount` and so cannot be used directly.
