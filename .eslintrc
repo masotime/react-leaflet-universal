@@ -5,6 +5,9 @@
   "settings": {
     "import/resolver": {
       "babel-module": {}
+    },
+    "react": {
+      "version": "detect"
     }
   },
   "rules": {

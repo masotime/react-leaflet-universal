@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 
-const { node, oneOfType, func } = PropTypes;
+const { node, oneOfType, func, object } = PropTypes;
 
 export default function decorate(componentName) {
 	const displayName = `LeafletUniv${componentName}`;
@@ -36,7 +36,7 @@ export default function decorate(componentName) {
 	Decorated.displayName = displayName;
 	Decorated.propTypes = {
 		children: oneOfType([node, func]),
-		leafletRef: func
+		leafletRef: oneOfType([func, object])
 	};
 
 	return Decorated;
